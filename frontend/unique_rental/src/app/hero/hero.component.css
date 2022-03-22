@@ -8,6 +8,12 @@ h1{
     font-weight: bolder;
     font-size: 55px;
 }
+.left__info{
+    display: none;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
 .hero_section{
     display: flex;
 }
@@ -57,4 +63,97 @@ h1{
 }
 .models{
     height: 70px;
+}
+
+/* denise.wambui@moringaschool.com */
+/* angelique@moringaschool.com */
+
+@media (max-width: 480px){
+    .left{
+        display: none;
+    }
+    .right{
+        width: 100%;
+    }
+    .hero__car{
+        margin-left: 0;
+    }
+    .navbar-toggler{
+        margin-left: 400px;
+    }
+    .navbar-nav{
+        float: right;
+    }
+    .left__info{
+        display: block;
+        margin-top: 7vh;
+        margin-bottom: -150px;
+    }
+}
+
+@media (max-width: 768px){
+    .left{
+        display: none;
+    }
+    .right{
+        width: 100%;
+    }
+    .hero__car{
+        margin-left: 0;
+    }
+    .navbar-toggler{
+        margin-right: -400px;
+    }
+    .navbar-nav{
+        float: right;
+    }
+    .left__info{
+        display: block;
+        margin-top: 7vh;
+        margin-bottom: -100px;
+    }
+}
+@media (max-width: 800px){
+    .left{
+        display: none;
+    }
+    .right{
+        width: 100%;
+    }
+    .hero__car{
+        margin-left: 0;
+    }
+    .navbar-toggler{
+        margin-left: 400px;
+    }
+    .navbar-nav{
+        float: right;
+    }
+    .left__info{
+        display: block;
+        margin-top: 7vh;
+        margin-bottom: -100px;
+    }
+}
+@media (max-width: 990px){
+    .left{
+        display: none;
+    }
+    .right{
+        width: 100%;
+    }
+    .hero__car{
+        margin-left: 0;
+    }
+    .navbar-toggler{
+        margin-left: 400px;
+    }
+    .navbar-nav{
+        float: right;
+    }
+    .left__info{
+        display: block;
+        margin-top: 7vh;
+        margin-bottom: -100px;
+    }
 }
