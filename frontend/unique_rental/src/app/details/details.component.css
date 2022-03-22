@@ -12,3 +12,10 @@ form > input{
     box-shadow: none;
     font-family: Nunito;
 }
+form > textarea{
+    box-shadow: none;
+    font-family: Nunito;
+}
+small{
+    font-family: Nunito;
+}
