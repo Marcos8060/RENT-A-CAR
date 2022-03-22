@@ -19,3 +19,12 @@ form > textarea{
 small{
     font-family: Nunito;
 }
+.btn{
+    background: #000;
+    color: white;
+    box-shadow: none;
+    font-family: Nunito;
+}
+select{
+    font-family: Nunito;
+}
