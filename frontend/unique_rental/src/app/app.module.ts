@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeroComponent } from './hero/hero.component';
 import { FleetComponent } from './fleet/fleet.component';
+import { DetailsComponent } from './details/details.component';
 
 
 const appRoutes: Routes = [
@@ -16,7 +17,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HeroComponent,
-    FleetComponent
+    FleetComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,

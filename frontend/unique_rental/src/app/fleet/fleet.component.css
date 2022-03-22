@@ -1,6 +1,10 @@
 h1{
     font-weight: bolder;
 }
+h4{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+}
 p{
     font-family: Nunito;
 }
