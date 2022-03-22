@@ -1,0 +1,14 @@
+.detail__img{
+    border-radius: 15px;
+    height: 380px;
+}
+h6{
+    font-family: Poppins;
+}
+p{
+    font-family: Nunito;
+}
+form > input{
+    box-shadow: none;
+    font-family: Nunito;
+}

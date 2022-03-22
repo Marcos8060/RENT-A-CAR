@@ -11,7 +11,8 @@ import { DetailsComponent } from './details/details.component';
 
 const appRoutes: Routes = [
   { path: '' , component : HeroComponent },
-  { path: 'fleet', component : FleetComponent}
+  { path: 'fleet', component : FleetComponent},
+  { path: 'details', component: DetailsComponent}
 ]
 @NgModule({
   declarations: [

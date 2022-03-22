@@ -6,3 +6,13 @@
 h1,h2,h3{
     font-family: 'Poppins', sans-serif;
 }
+.btn1{
+    background: #000;
+    color: white;
+    border: none;
+    font-family: Nunito;
+    font-weight: bolder;
+    height: 40px;
+    padding: 10px;
+    border-radius: 3px;
+}
