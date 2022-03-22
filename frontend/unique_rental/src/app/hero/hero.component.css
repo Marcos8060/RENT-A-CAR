@@ -1,0 +1,60 @@
+h3{
+    font-weight: bolder;
+}
+p{
+    font-family: Nunito;
+}
+h1{
+    font-weight: bolder;
+    font-size: 55px;
+}
+.hero_section{
+    display: flex;
+}
+.left{
+    background: white;
+    width: 50%;
+    height: 100vh;
+}
+.right{
+    background: #DBEAF2;
+    width: 50%;
+    height: 100vh;
+}
+.nav-link{
+    color: black;
+    font-family: Nunito;
+    font-weight: bolder;
+}
+.profile__homeImg{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 999px;
+}
+.dropdown-item{
+    font-family: Nunito;
+}
+.hero__car{
+    margin-left: -260px;
+    height: 400px;
+}
+.btn1{
+    background: #000;
+    color: white;
+    border: none;
+    font-family: Nunito;
+    font-weight: bolder;
+    height: 40px;
+    padding: 10px;
+    border-radius: 3px;
+}
+.models__section{
+    margin-top: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.models{
+    height: 70px;
+}
