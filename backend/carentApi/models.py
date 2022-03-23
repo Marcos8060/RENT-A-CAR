@@ -37,6 +37,22 @@ class Car_Model(models.Model):
     image_interior =ImageField(blank=True)
     image_rear =ImageField(blank=True)
 
+    def __str__(self):
+        return self.title
+
+    def save_post(self):
+        self.save()    
+
+    def delete_post(self):
+        self.delete()
+
+    @classmethod
+    def search_project(cls, title):
+        return cls.objects.filter(title__icontains=title).all()
+
+    @classmethod
+    def all_posts(cls):
+        return cls.objects.all()
 
 
 
