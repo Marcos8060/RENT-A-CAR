@@ -1,3 +1,4 @@
+from turtle import title
 from django.db import models
 from django.contrib.auth.models import User
 from django.forms import IntegerField
@@ -40,20 +41,35 @@ class Car_Model(models.Model):
     def __str__(self):
         return self.title
 
-    def save_post(self):
+    def save_carModel(self):
         self.save()    
 
-    def delete_post(self):
+    def delete_carModel(self):
         self.delete()
 
     @classmethod
-    def search_project(cls, title):
-        return cls.objects.filter(title__icontains=title).all()
+    def search_carModel(cls, title):
+        return cls.objects.filter(title__icontains= 'model').all()
 
     @classmethod
-    def all_posts(cls):
+    def all_carModels(cls):
         return cls.objects.all()
 
 
+class Comment(models.Model):
+    title = models.CharField(max_length=150)
+    comment = models.CharField(max_length=500)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, related_name='commenter')
+    carModel = models.ForeignKey(User, on_delete=models.CASCADE, null=True, related_name='carmodel', null=True)
 
-       
+    def save_comments(self):
+        self.save()
+
+    @classmethod
+    def get_comments(cls, id):
+        comments= Comment.objects.filter(post_id=id).all()
+        return comments
+    
+    def __str__(self):
+        return self.comment
+   
