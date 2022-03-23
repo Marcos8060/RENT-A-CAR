@@ -33,23 +33,11 @@ p{
     background: black;
     color: white;
 }
-.top__gallery__section{
-    margin-top: 10vh;
-    margin-bottom: 10px;
-    display: flex;
-    overflow-y: hidden;
-    overflow-x: scroll;
-}
-.top__gallery__section::-webkit-scrollbar{
-    display: none;
-}
-.top__gallery__section > img{
-    max-height: 350px;
-    width: 300px;
-    border-radius: 15px;
-    margin: 15px;
-}
-.lower__gallery__section > div > div > img{
+.lower__gallery__section > div > div > a > img{
     border-radius: 10px;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
+    transition: transform 450ms;
+}
+.lower__gallery__section > div > div > a > img:hover{
+    transform: scale(1.1);
 }
