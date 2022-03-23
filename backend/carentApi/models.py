@@ -34,9 +34,9 @@ class Car_Model(models.Model):
     hourly_rate  = IntegerField()
     description = models.TextField(max_length=700)
     year= IntegerField()
-    image =ImageField(blank=True)
-    image_interior =ImageField(blank=True)
-    image_rear =ImageField(blank=True)
+    image =models.ImageField(upload_to='images/', default='default.png')
+    image_interior =models.ImageField(upload_to='images/', default='default.png')
+    image_rear =models.ImageField(upload_to='images/', default='default.png')
 
     def __str__(self):
         return self.title
@@ -60,7 +60,7 @@ class Comment(models.Model):
     title = models.CharField(max_length=150)
     comment = models.CharField(max_length=500)
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, related_name='commenter')
-    carModel = models.ForeignKey(User, on_delete=models.CASCADE, null=True, related_name='carmodel', null=True)
+    carModel = models.ForeignKey(User, on_delete=models.CASCADE, null=True, related_name='carmodel')
 
     def save_comments(self):
         self.save()
