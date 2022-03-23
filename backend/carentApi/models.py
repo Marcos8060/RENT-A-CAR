@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.forms import IntegerField
 from pyuploadcare.dj.models import ImageField
 from django.dispatch import receiver
 from django.db.models.signals import post_save
@@ -23,4 +24,20 @@ class Profile(models.Model):
     @receiver(post_save,sender=user)
     def save_profile(sender, instance, **kwargs):
         instance.profile.save()
-        
+
+class Car_Model(models.Model):
+    name = models.CharField(max_length=150)
+    model = models.CharField(max_length=150)
+    human_cpty = models.CharField(max_length=150)
+    luggage_cpty = models.CharField(max_length=150)
+    hourly_rate  = IntegerField()
+    description = models.TextField(max_length=700)
+    year= IntegerField()
+    image =ImageField(blank=True)
+    image_interior =ImageField(blank=True)
+    image_rear =ImageField(blank=True)
+
+
+
+
+       
