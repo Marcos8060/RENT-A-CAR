@@ -16,3 +16,9 @@ class CarModel_viewSet(viewsets.ModelViewSet):
     serializer_class = Car_Model_Serializer
 
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    
+class User_viewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = User_Serializer
+    
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
