@@ -31,8 +31,15 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'carentApi',
+    "pyuploadcare.dj",
+
 
 ]
+
+UPLOADCARE = {
+    'pub_key': config('UPLOADCARE_KEY'),
+    'secret': config('UPLOADCARE_SECRET'),
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
