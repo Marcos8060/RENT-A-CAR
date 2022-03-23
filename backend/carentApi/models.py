@@ -29,17 +29,17 @@ class Profile(models.Model):
 class Car_Model(models.Model):
     name = models.CharField(max_length=150)
     model = models.CharField(max_length=150)
-    human_cpty = models.CharField(max_length=150)
-    luggage_cpty = models.CharField(max_length=150)
-    hourly_rate  = IntegerField()
+    human_cpty = models.IntegerField()
+    luggage_cpty = models.IntegerField()
+    hourly_rate  = models.IntegerField()
     description = models.TextField(max_length=700)
-    year= IntegerField()
+    year= models.DateField()
     image =models.ImageField(upload_to='images/', default='default.png')
     image_interior =models.ImageField(upload_to='images/', default='default.png')
     image_rear =models.ImageField(upload_to='images/', default='default.png')
 
     def __str__(self):
-        return self.title
+        return self.name
 
     def save_carModel(self):
         self.save()    
