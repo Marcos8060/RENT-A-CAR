@@ -29,8 +29,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rentalBackendapp', 
     'rest_framework',
+    'carentApi',
 
 ]
 
