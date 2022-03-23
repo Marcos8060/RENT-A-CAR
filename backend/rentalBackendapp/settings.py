@@ -61,7 +61,7 @@ CORS_ALLOWED_ORIGINS =[
     "http://127.0.0.1:9000",
 ]
 CORS_ALLOWED_ORIGIN_REGEXES = [
-    
+    "http://localhost:8080",
 ]
 
 ROOT_URLCONF = 'rentalBackendapp.urls'
