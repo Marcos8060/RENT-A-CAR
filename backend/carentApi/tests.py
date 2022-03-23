@@ -21,7 +21,7 @@ class TestCarModel(TestCase):
     def setUp(self):
         self.user = User.objects.create(id=1, username='Prime')
         self.carModel = Car_Model.objects.create(id=1, name= 'Mercedece G-wagon', model='Mercedece', human_cpty='5 persons',
-                     luggage_cpty='200kg', hourly_rate='5000' , description= 'The Mercedes-Benz G-Class, in American English sometimes called G-Wagon, is a four-wheel drive automobile manufactured by Magna Stey', year='2021', image='test_img1.png', image_interior='test_img2.png', image_rear='test_img3.png')
+                     luggage_cpty='200kg', hourly_rate=5000 , description= 'The Mercedes-Benz G-Class, in American English sometimes called G-Wagon, is a four-wheel drive automobile manufactured by Magna Stey', year=2021, image='test_img1.png', image_interior='test_img2.png', image_rear='test_img3.png')
     def test_instance(self):
         self.assertTrue(isinstance(self.carModel, Car_Model))
 
@@ -44,3 +44,24 @@ class TestCarModel(TestCase):
         self.carModel.delete_carModel()
         carModel = Car_Model.search_project('test')
         self.assertTrue(len(carModel) < 1)
+
+class TestComment(TestCase):
+    def setUp(self):
+        self.user = User.objects.create(id=1, username='prime')
+        self.carModel = Car_Model.objects.create(id=1, name= 'Mercedece G-wagon', model='Mercedece', human_cpty='5 persons',
+                     luggage_cpty='200kg', hourly_rate='5000' , description= 'The Mercedes-Benz G-Class, in American English sometimes called G-Wagon, is a four-wheel drive automobile manufactured by Magna Stey', year='2021', image='test_img1.png', image_interior='test_img2.png', image_rear='test_img3.png')
+        self.comment = Comment.objects.create(id=1, title='comfort', comment='This is a test comment', user=self.user, carModel=self.post)
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.comment, Comment))
+
+    def test_save_comment(self):
+        self.comment.save_comment()
+        comment = Comment.objects.all()
+        self.assertTrue(len(comment) > 0)
+
+    def test_get_carModel_comments(self, id):
+        self.comment.save()
+        comment = Comment.get_comments(post_id=id)
+        self.assertTrue(len(comment) == 1)
+
