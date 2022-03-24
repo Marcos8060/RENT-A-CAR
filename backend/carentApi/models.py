@@ -59,8 +59,8 @@ class Car_Model(models.Model):
 class Comment(models.Model):
     title = models.CharField(max_length=150)
     comment = models.CharField(max_length=500)
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, related_name='commenter')
-    carModel = models.ForeignKey(User, on_delete=models.CASCADE, null=True, related_name='carmodel')
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    carModel = models.ForeignKey(Car_Model, on_delete=models.CASCADE, null=True, related_name='comment')
 
     def save_comments(self):
         self.save()

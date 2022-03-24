@@ -6,6 +6,7 @@ from rest_framework.routers import DefaultRouter
 router = DefaultRouter()
 router.register('profile', views.Profile_viewSet)
 router.register('car_models', views.CarModel_viewSet)
+router.register('car_models/<int:pk>', views.Car_details_viewSet)
 router.register('users', views.User_viewSet)
 
 urlpatterns = [
